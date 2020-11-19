@@ -114,27 +114,7 @@
 						<div class="hero-title"></div>
 						<div class="hero-subtitle"><span>2</span><span>0</span><span>2</span><span>0</span></div>
 					</div>
-					<ul class="countdown">
-						<li> 
-							<span class="days">25</span>
-							<p class="days_ref">days</p>
-						</li>
-						<li>
-							<span class="hours">9</span>
-							<p class="hours_ref">hours</p>
-						</li>
-						<li>
-							<span class="minutes">00</span>
-							<p class="minutes_ref">minutes</p>
-						</li>
-						<li>
-							<span class="seconds">00</span>
-							<p class="seconds_ref">seconds</p>
-						</li>
-						<!-- <li> <span class = "days">Will Update </span>
-						<span class = "hours"> Soon</span>
-						<span class = "minutes">Stay Tuned</span>
-						<span class = "seconds"></span></li> -->
+					<ul class="countdown" id="countdowntime">
 					</ul>
 				</div>
 				<svg class="scene" width="1440" height="800" preserveAspectRatio="xMinYMid slice" viewBox="0 0 1440 800">
@@ -918,9 +898,7 @@
 										</div>
 										<div class="col-lg-9 mt-4 mt-lg-0">
 											<div class="sponsors">
-												<img src="img/logos/techeroes.png" alt="techeroes">			
-												
-												
+												<img src="img/logos/techeroes.png" alt="techeroes">	
 											</div>
 										</div>									
 										<div class="col-lg-3 mt-5">
@@ -928,9 +906,10 @@
 										</div>
 										<div class="col-lg-9 mt-4 mt-lg-5">
 											<div class="sponsors">
-												<img src="img/logos/taskade-circle-logo.png" alt="Taskade">
-												<img class="mt-3 mt-md-0" src="img/logos/Axure_RP_icon@2x.png" alt="Axure">
-												<img src="img/logos/jetbrains.png" alt="jetbrains">
+												
+												<a href="https://www.taskade.com/" target="_blank"><img src="img/logos/taskade-circle-logo.png" alt="Taskade"></a>
+												<a href="https://www.axure.com/" target="_blank"><img class="mt-3 mt-md-0" src="img/logos/Axure_RP_icon@2x.png" alt="Axure"></a>
+												<a href="https://www.jetbrains.com/" target="_blank"><img src="img/logos/jetbrains.png" alt="jetbrains"></a>
 												
 											</div>
 										</div>
@@ -1477,7 +1456,7 @@
 
 		<script>
 			// Set the date we're counting down to
-			var countDownDate = new Date("nov 4, 2020 09:37:25").getTime();
+			var countDownDate = new Date("Dec 14, 2020 09:37:25").getTime();
 			
 			// Update the count down every 1 second
 			var x = setInterval(function() {
@@ -1495,30 +1474,12 @@
 			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 				
 			  // Output the result in an element with id="demo"
-			  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-			  + minutes + "m " + seconds + "s ";
-			  <ul class="countdown">
-						<li> 
-							<span class="days">26</span>
-							<p class="days_ref">days</p>
-						</li>
-						<li>
-							<span class="hours">10</span>
-							<p class="hours_ref">hours</p>
-						</li>
-						<li>
-							<span class="minutes">00</span>
-							<p class="minutes_ref">minutes</p>
-						</li>
-						<li>
-							<span class="seconds">20</span>
-							<p class="seconds_ref">seconds</p>
-						</li>
-					</ul>
+			  document.getElementById("countdowntime").innerHTML = 
+			  '<li><span class="days">'+days+'</span><p class="days_ref">days</p></li><li><span class="hours">'+hours+'</span><p class="hours_ref">hours</p></li><li><span class="minutes">'+minutes+'</span><p class="minutes_ref">minutes</p></li><li><span class="seconds">'+seconds+'</span><p class="seconds_ref">seconds</p></li>';
 			  // If the count down is over, write some text 
 			  if (distance < 0) {
 				clearInterval(x);
-				document.getElementById("countdown").innerHTML = "EXPIRED";
+				document.getElementById("countdowntime").innerHTML = '<li><span class="days">Hackon is Live</span></li>';
 			  }
 			}, 1000);
 			</script>
